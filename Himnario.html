@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prada Himnos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que la ruta al archivo CSS es correcta -->
+</head>
+<body>
+    <header>
+        <div id="titulo"></div>
+    </header>
+    
+    <aside>
+        <h2>Menú</h2>
+        <select id="seleccion">
+            <option value="" disabled selected>Selecciona tu Himnario</option>
+            <option value="manantial">Manantial de Inspiracion</option>
+            <option value="lluvia">Lluvia de Bendiciones</option>
+            <option value="corario">Corario IPUC</option>
+        </select>
+        <input type="text" id="buscarInput" placeholder="Buscar himno..."> <!-- Barra de búsqueda -->
+        <div id="lista"></div> <!-- Utilizar div en lugar de una lista -->
+    </aside>
+
+    <main id="letra-seccion">
+        <p id="letra"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Andres Prada. Todos los derechos Reservados.</p>
+    </footer>
+
+    <script src="function.js"></script> 
+</body>
+</html>
