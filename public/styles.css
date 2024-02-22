@@ -1,0 +1,204 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-columns: 360px auto;
+    grid-template-rows: 120px auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1e1e1e; /* Color de fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+}
+
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+header div {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el contenido principal */
+aside {
+    background-image: radial-gradient(circle, #110c24 42%, #000000 93%);
+    height: calc(100vh - 50px);
+    box-shadow: 0 4px 15px rgb(0, 225, 255); 
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 20px;
+    border-radius: 10px;
+}
+aside section{
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+    
+}
+
+.seleccion {
+    transition: all 0.3s ease-in-out;
+   
+}
+.seleccion img {
+    width: 90px;
+    border-radius: 10%;
+    transition: all 0.3s ease-in-out;
+}
+.seleccion.seleccionado {
+    transform: scale(1.2);
+    filter: none;
+    z-index: 1;
+}
+
+.seleccion.no-seleccionado {
+    filter: grayscale(100%);
+}
+
+.seleccion:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(0, 225, 255); 
+
+}
+
+
+#letra-seccion {
+    background-image: radial-gradient(circle, #110c24 42%, #000000 93%);
+    font-family: 'Montserrat', sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 900px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-color: #007BFF; /* Cambia el color del borde cuando el input está enfocado */
+    box-shadow: 0 0 15px rgb(0, 225, 255); 
+    border-radius: 10px;
+    max-height: calc(100vh - 180px); /* Ajusta este valor según tus necesidades */
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+    
+}
+#letra-seccion::-webkit-scrollbar {
+    width: 7px;
+}
+#letra-seccion::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+#letra-seccion::-webkit-scrollbar-thumb:hover {
+    background: #712def4c;
+}
+
+aside h2 {
+    margin: 0 0 10px 0; /* Añade un margen inferior de 10px al título */
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Color de texto blanco */
+}
+
+aside select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    color: #333; /* Cambia el color del texto */
+    background-color: #f9f9f9; /* Cambia el color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Agrega una sombra */
+    transition: all 0.3s ease; /* Agrega una transición suave a los cambios de estilo */
+    background-color: #1e1e1e; /* Color de fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+}
+
+aside select:focus {
+    border-color: #007BFF; /* Cambia el color del borde cuando el select está enfocado */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+aside div {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#lista {
+    height: calc(100vh - 310px);
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+}
+#lista::-webkit-scrollbar {
+    width: 7px;
+}
+#lista::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+#lista::-webkit-scrollbar-thumb:hover {
+    background: #712def4c;
+} 
+
+#lista div {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+#lista div:hover {
+    background-color: #3a3a3a; /* Color de fondo oscuro más claro */
+}
+
+#lista div.active {
+    background-color: rgb(0, 225, 255); /* Color de fondo para el elemento activo */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+#letra {
+    text-align: center;
+    font-size: 20px;
+    color: #fff; /* Color de texto blanco */
+}
+
+#buscarInput {
+    width: 93%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    color: #fff; /* Cambia el color del texto */
+    background-color: #1e1e1e; /* Color de fondo oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Agrega una sombra */
+    transition: all 0.3s ease; /* Agrega una transición suave a los cambios de estilo */
+}
+
+#buscarInput:focus {
+    border-color: #007BFF; /* Cambia el color del borde cuando el input está enfocado */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+
