@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const header = document.querySelector('header');
+            header.addEventListener('mousemove', (e) => {
+                const rect = header.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                header.style.backgroundImage = `radial-gradient(circle 500px at ${x}px ${y}px, red, transparent)`;
+            });
+
+            header.addEventListener('mouseleave', () => {
+                header.style.backgroundImage = 'none';
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const divs = document.querySelectorAll('.principal div');
+            divs.forEach((div) => {
+                div.addEventListener('click', () => {
+                    div.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+    <style>
+        html body{
+            font-family:'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(26, 26, 26);
+        }
+        header{
+            position: relative;
+            background-color: #000; 
+            height: 300px;
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 5%;
+            border-bottom-right-radius: 5%;
+            box-shadow: 0 0 10px 0 #000;
+            transition: 1s ease-in-out;
+            
+        }
+        header h1{
+            font-size: 50px;
+            color: aliceblue; 
+            transition: 1s ease-in-out;    
+            padding: 0;
+            margin: 0;       
+        }
+    
+        header:hover {
+            height: 350px;
+        }
+        header:hover h1{
+            color: aqua;
+            font-size: 70px;
+            padding: 0;
+            margin: 0;  
+        }
+        .principal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .principal div {
+            width: 200px;
+            height: 200px;
+            transition: .2s ease-in-out;
+            transform: skewX(5deg) rotate(0deg) ; 
+            border-radius: 10%;
+            margin: -90px;
+        }
+        .principal div.active {
+            z-index: 1;
+                width: 300px;
+                height: 300px;
+                position: fixed;
+                top: 1000%;
+                left:90%;
+                transform: translate(-50%, -50%) scale(1.5);
+                transition: .3s ease-in-out;
+                border-radius: 10%;
+            
+        }
+        .caja1 {
+            background: #001F3F;
+        }
+        .caja2 {
+            background: #003366;
+        }
+        .caja3 {
+            background: #004080;
+        }
+        .caja4 {
+            background: #005AA7;
+        }
+        .caja5 {
+            background: #0077B6;
+        }
+        .caja6 {
+            background: #0096C7;
+        }
+        .caja7 {
+            background: #00A6ED;
+        }
+        .caja8 {
+            background: #00B4FF;
+        }
+        .caja9 {
+            background: #74C0FC;
+        }
+        .caja10 {
+            background: #9ACDE6;
+        }
+        .caja11 {
+            background: #C5E0DC;
+        }
+        .caja12 {
+            background: #EDF5E1;
+        }
+        .caja1:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja2:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja3:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja4:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja5:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja6:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja7:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja8:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja9:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja10:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja11:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+        .caja12:hover{
+            transform: translateY(-40px) skewY(5deg);
+            /* box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47); */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portafolio</h1>
+        <h1>Andres Prada</h1>
+    </header>
+    <div class="principal">
+        <div class="caja1"></div>
+        <div class="caja2"></div>
+        <div class="caja3"></div>
+        <div class="caja4"></div>
+        <div class="caja5"></div>
+        <div class="caja6"></div>
+        <div class="caja7"></div>
+        <div class="caja8"></div>
+        <div class="caja9"></div>
+        <div class="caja10"></div>
+        <div class="caja11"></div>
+        <div class="caja12"></div>
+
+     </div>
+   
+
+   
+    
+</body>
+</html>
